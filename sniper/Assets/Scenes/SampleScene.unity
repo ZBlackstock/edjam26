@@ -1852,6 +1852,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &411701750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411701751}
+  m_Layer: 0
+  m_Name: Camera_TPs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411701751
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411701750}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1392682155}
+  - {fileID: 536664310}
+  - {fileID: 1815735553}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &414357798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2837,6 +2871,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93f13f688fd71674cbf447989b4dac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  TPs:
+  - {fileID: 1392682155}
+  - {fileID: 536664310}
+  - {fileID: 1815735553}
 --- !u!1 &526678672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2928,6 +2966,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &536664309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536664310}
+  m_Layer: 0
+  m_Name: TP_Street
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &536664310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536664309}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 57.3, y: 0.7, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 411701751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597745398
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,7 +4979,7 @@ MonoBehaviour:
   look: Look
   attack: Attack
   moveLeftAction:
-    m_Name: 
+    m_Name: Move Left
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 7dbd630a-2cc3-49ee-928d-57c54327a124
@@ -4919,7 +4988,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   moveRightAction:
-    m_Name: 
+    m_Name: Move Right
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 265d81da-4366-4e99-8c01-f778d6726794
@@ -4928,7 +4997,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   moveUpAction:
-    m_Name: 
+    m_Name: Move Up
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: e93b8239-74e1-4309-9a32-70da8d91e23e
@@ -4937,7 +5006,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   moveDownAction:
-    m_Name: 
+    m_Name: Move Down
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: a2e45c0a-cfc1-4476-b98a-32c47d3229d5
@@ -4946,7 +5015,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   lookAction:
-    m_Name: 
+    m_Name: Look
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 6b1f2293-7e07-4c3a-af19-0695e36a4e39
@@ -4955,7 +5024,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   attackAction:
-    m_Name: 
+    m_Name: Attack
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 61f3ae0c-f665-481b-a3eb-dce9c4fabcf3
@@ -5253,6 +5322,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1392682154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392682155}
+  m_Layer: 0
+  m_Name: TP_Building
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1392682155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392682154}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -40, y: -5, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 411701751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1415379220
 GameObject:
   m_ObjectHideFlags: 0
@@ -7046,6 +7146,37 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1815735552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1815735553}
+  m_Layer: 0
+  m_Name: TP_Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1815735553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815735552}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 141.5, y: -1.3, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 411701751}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850339368
 GameObject:
   m_ObjectHideFlags: 0
@@ -8442,3 +8573,4 @@ SceneRoots:
   - {fileID: 1750949927}
   - {fileID: 379670225}
   - {fileID: 1415379224}
+  - {fileID: 411701751}

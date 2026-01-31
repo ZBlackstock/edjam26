@@ -3,6 +3,7 @@ using UnityEngine;
 public class CameraTransition : MonoBehaviour
 {
     InputManager input;
+    [SerializeField] private Transform[] TPs;
 
     private void Awake()
     {
