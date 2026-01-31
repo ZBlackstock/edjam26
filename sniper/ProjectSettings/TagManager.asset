@@ -8,37 +8,37 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ""
   - Water
   - UI
   - Wall
-  -
+  - ""
   - Camera
   - CameraBounds
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
+  - ""
   m_SortingLayers:
   - name: Default
     uniqueID: 0
