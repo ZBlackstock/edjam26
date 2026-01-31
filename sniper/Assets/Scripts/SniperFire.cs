@@ -8,11 +8,14 @@ public class SniperFire : MonoBehaviour
     public SpriteRenderer sniper;
     public SpriteRenderer handGun;
     bool canFire = true;
+    private SoundManager sound;
 
     void Start()
     {
         input = FindFirstObjectByType<InputManager>();
         trans = transform;
+        sound = FindFirstObjectByType<SoundManager>();
+
     }
 
     // Update is called once per frame
@@ -39,7 +42,7 @@ public class SniperFire : MonoBehaviour
         float z = -25;
         float fireZ = -40;
         float curZ = z;
-
+        sound.PlaySound(sound.gunshot_Sniper);
         while (trans.position.z > fireZ)
         {
             curZ = Mathf.Lerp(z, fireZ, elapsed / dur);
@@ -70,9 +73,10 @@ public class SniperFire : MonoBehaviour
         canFire = false;
         float elapsed = 0;
         float dur = 0.06f;
-        float z = -25;
+        float z = -20;
         float fireZ = -30;
         float curZ = z;
+        sound.PlaySound(sound.gunshot_Handgun);
 
         handGun.transform.GetChild(0).gameObject.SetActive(true);
         while (trans.position.z > fireZ)
