@@ -18,20 +18,26 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string playerActionMapName = "Player";
 
     //Action names
-    [SerializeField] private string moveLeft = "Previous";
-    [SerializeField] private string moveRight = "Next";
+    [SerializeField] private string moveLeft = "left";
+    [SerializeField] private string moveRight = "right";
+    [SerializeField] private string moveUp = "up";
+    [SerializeField] private string moveDown = "down";
     [SerializeField] private string look = "Look";
     [SerializeField] private string attack = "Attack";
 
     //Actions
-    private InputAction moveLeftAction;
-    private InputAction moveRightAction;
-    private InputAction lookAction;
-    private InputAction attackAction;
+    public InputAction moveLeftAction;
+    public InputAction moveRightAction;
+    public InputAction moveUpAction;
+    public InputAction moveDownAction;
+    public InputAction lookAction;
+    public InputAction attackAction;
 
     //Inputs
     public bool moveLeftInput { get; private set; }
     public bool moveRightInput { get; private set; }
+    public bool moveUpInput { get; private set; }
+    public bool moveDownInput { get; private set; }
     public Vector2 lookInput { get; private set; }
     public bool attackInput { get; private set; }
 
@@ -52,6 +58,8 @@ public class InputManager : MonoBehaviour
         //set up the action variables
         moveLeftAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveLeft);
         moveRightAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveRight);
+        moveUpAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveUp);
+        moveDownAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveDown);
         lookAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(look);
         attackAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(attack);
 
@@ -69,7 +77,9 @@ public class InputManager : MonoBehaviour
     private void OnEnable()
     {
         moveLeftAction.Enable();
-        moveRightAction.Enable();
+        moveRightAction.Enable(); 
+        moveUpAction.Enable();
+        moveDownAction.Enable();
         lookAction.Enable();
         attackAction.Enable();
     }
@@ -78,6 +88,8 @@ public class InputManager : MonoBehaviour
     {
         moveLeftAction.Disable();
         moveRightAction.Disable();
+        moveUpAction.Disable();
+        moveDownAction.Disable();
         lookAction.Disable();
         attackAction.Disable();
     }

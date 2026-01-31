@@ -2684,6 +2684,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -2824,6 +2825,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   input: {fileID: 1283746708}
   mouseSensitivity: 14
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f13f688fd71674cbf447989b4dac98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &526678672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4890,10 +4903,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputController
   PlayerInputs: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   playerActionMapName: Player
-  moveLeft: Previous
-  moveRight: Next
+  moveLeft: left
+  moveRight: right
+  moveUp: up
+  moveDown: down
   look: Look
   attack: Attack
+  moveLeftAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 7dbd630a-2cc3-49ee-928d-57c54327a124
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  moveRightAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 265d81da-4366-4e99-8c01-f778d6726794
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  moveUpAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: e93b8239-74e1-4309-9a32-70da8d91e23e
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  moveDownAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a2e45c0a-cfc1-4476-b98a-32c47d3229d5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  lookAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6b1f2293-7e07-4c3a-af19-0695e36a4e39
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  attackAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 61f3ae0c-f665-481b-a3eb-dce9c4fabcf3
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!4 &1283746709
 Transform:
   m_ObjectHideFlags: 0
