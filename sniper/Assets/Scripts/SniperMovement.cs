@@ -14,6 +14,12 @@ public class SniperMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        Cursor.visible = false;
+        
+    }
+
     void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(input.lookInput.x * mouseSensitivity, input.lookInput.y * mouseSensitivity);
