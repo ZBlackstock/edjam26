@@ -6,10 +6,12 @@ public class CameraTransition : MonoBehaviour
 {
     InputManager input;
     private Transform currentTP;
+    private int currentTP_Index;
     [SerializeField] private Transform[] TPs; // 0 - building, 1 - street, 2 - room
     [SerializeField] private SpriteRenderer sniper;
     [SerializeField] private SpriteRenderer handgun;
     [SerializeField] private GameObject postProcessing;
+    public Turn turn;
 
     private void Awake()
     {
@@ -29,6 +31,8 @@ public class CameraTransition : MonoBehaviour
             if (currentTP != TPs[0])
             {
                 SetAim(TPs[0], true);
+                turn.TurnPlayer(currentTP_Index, 0);
+                currentTP_Index = 0;
             }
         }
         else if (input.moveDownAction.WasPressedThisFrame())
@@ -37,14 +41,24 @@ public class CameraTransition : MonoBehaviour
             if (currentTP != TPs[1])
             {
                 SetAim(TPs[1], true);
+                turn.TurnPlayer(currentTP_Index, 1);
+                currentTP_Index = 1;
             }
         }
         else if (input.moveLeftAction.WasPressedThisFrame() || input.moveRightAction.WasCompletedThisFrame())
         {
-            print("Room");
             if (currentTP != TPs[2])
             {
+                print("Room");
                 SetAim(TPs[2], false);
+                turn.TurnPlayer(currentTP_Index, 2);
+                currentTP_Index = 2;
+            }
+            else
+            {
+                SetAim(TPs[0], true);
+                turn.TurnPlayer(currentTP_Index, 0);
+                currentTP_Index = 0;
             }
         }
     }
