@@ -9,7 +9,7 @@ using UnityEngine.InputSystem.Controls;
 using UnityEngine.TextCore.Text;
 using UnityEngine.Rendering.Universal;
 
-public class InputController : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     //Input Actions Assets
     [SerializeField] private InputActionAsset PlayerInputs;
@@ -35,7 +35,7 @@ public class InputController : MonoBehaviour
     public Vector2 lookInput { get; private set; }
     public bool attackInput { get; private set; }
 
-    public static InputController Instance { get; private set; }
+    public static InputManager Instance { get; private set; }
 
     private void Awake()
     {
