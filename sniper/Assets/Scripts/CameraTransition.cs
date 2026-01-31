@@ -23,7 +23,6 @@ public class CameraTransition : MonoBehaviour
     void Start()
     {
         currentTP = TPs[0]; // Set to aim sniper at building on start
-        sound.PlaySound(sound.woosh_ToBuilding);
         sound.PlaySoundLoop(sound.ambience_Building, 1);
         sound.PlaySoundLoop(sound.ambience_Party, 1);
         sound.PlaySoundLoop(sound.wind_Building, 1);
