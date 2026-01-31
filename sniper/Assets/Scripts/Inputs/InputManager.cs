@@ -18,25 +18,22 @@ public class InputController : MonoBehaviour
     [SerializeField] private string playerActionMapName = "Player";
 
     //Action names
-    [SerializeField] private string move = "Move";
+    [SerializeField] private string moveLeft = "Previous";
+    [SerializeField] private string moveRight = "Next";
     [SerializeField] private string look = "Look";
-    [SerializeField] private string interact = "Interact";
-    [SerializeField] private string cancel = "Cancel";
-    [SerializeField] private string information = "Information";
+    [SerializeField] private string attack = "Attack";
 
-    //Inputs
-    private InputAction moveAction;
+    //Actions
+    private InputAction moveLeftAction;
+    private InputAction moveRightAction;
     private InputAction lookAction;
-    public InputAction interactAction;
-    public InputAction cancelAction;
-    public InputAction informationAction;
+    private InputAction attackAction;
 
     //Inputs
-    public Vector2 MoveInput { get; private set; }
-    public Vector2 CameraInput { get; private set; }
-    public bool interactInput { get; private set; }
-    public bool cancelInput { get; private set; }
-    public bool informationInput { get; private set; }
+    public bool moveLeftInput { get; private set; }
+    public bool moveRightInput { get; private set; }
+    public Vector2 lookInput { get; private set; }
+    public bool attackInput { get; private set; }
 
     public static InputController Instance { get; private set; }
 
@@ -53,40 +50,35 @@ public class InputController : MonoBehaviour
         }
 
         //set up the action variables
-        moveAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(move);
+        moveLeftAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveLeft);
+        moveRightAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(moveRight);
         lookAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(look);
-        interactAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(interact);
-        cancelAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(cancel);
-        informationAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(information);
+        attackAction = PlayerInputs.FindActionMap(playerActionMapName).FindAction(attack);
 
         ReadPerformedActionsValue();
     }
 
     void ReadPerformedActionsValue()
     {
-        //get the vector2 for the move and look actions
-        moveAction.performed += context => MoveInput = context.ReadValue<Vector2>();
-        moveAction.canceled += context => MoveInput = Vector2.zero;
+        //get the vector2 for the look actions
 
-        lookAction.performed += context => CameraInput = context.ReadValue<Vector2>();
-        lookAction.canceled += context => CameraInput = Vector2.zero;
+        lookAction.performed += context => lookInput = context.ReadValue<Vector2>();
+        lookAction.canceled += context => lookInput = Vector2.zero;
     }
 
     private void OnEnable()
     {
-        moveAction.Enable();
+        moveLeftAction.Enable();
+        moveRightAction.Enable();
         lookAction.Enable();
-        interactAction.Enable();
-        cancelAction.Enable();
-        informationAction.Enable();
+        attackAction.Enable();
     }
 
     private void OnDisable()
     {
-        moveAction.Disable();
+        moveLeftAction.Disable();
+        moveRightAction.Disable();
         lookAction.Disable();
-        interactAction.Disable();
-        cancelAction.Disable();
-        informationAction.Disable();
+        attackAction.Disable();
     }
 }
