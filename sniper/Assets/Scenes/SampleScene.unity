@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 24025993}
   - component: {fileID: 24025995}
   - component: {fileID: 24025994}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 446505304}
   - component: {fileID: 446505306}
   - component: {fileID: 446505305}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2995,7 +2995,9 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
-  m_Layer: 0
+  - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
+  m_Layer: 6
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3155,6 +3157,79 @@ MonoBehaviour:
   sniper: {fileID: 1069199426}
   handgun: {fileID: 1230431727}
   postProcessing: {fileID: 256538958}
+--- !u!61 &519420035
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!50 &519420036
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &526678672
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,7 +3757,7 @@ GameObject:
   - component: {fileID: 703545311}
   - component: {fileID: 703545313}
   - component: {fileID: 703545312}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3967,7 +4042,7 @@ GameObject:
   - component: {fileID: 758083613}
   - component: {fileID: 758083615}
   - component: {fileID: 758083614}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4227,7 +4302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 791138909}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bounds_Building
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4264,7 +4339,7 @@ GameObject:
   - component: {fileID: 879003569}
   - component: {fileID: 879003571}
   - component: {fileID: 879003570}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4400,7 +4475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967206494}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bounds_Street
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4723,7 +4798,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1005464781}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Bounds_Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4850,7 +4925,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1069199425}
   - component: {fileID: 1069199426}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4942,7 +5017,7 @@ GameObject:
   - component: {fileID: 1101260504}
   - component: {fileID: 1101260506}
   - component: {fileID: 1101260505}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5315,7 +5390,7 @@ GameObject:
   - component: {fileID: 1122437645}
   - component: {fileID: 1122437647}
   - component: {fileID: 1122437646}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5720,7 +5795,7 @@ GameObject:
   - component: {fileID: 1208630020}
   - component: {fileID: 1208630022}
   - component: {fileID: 1208630021}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5948,7 +6023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230431726}
   - component: {fileID: 1230431727}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6129,7 +6204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1258313132}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CameraBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6145,7 +6220,7 @@ Transform:
   m_GameObject: {fileID: 1258313131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.69576, y: 5.09734, z: 0}
+  m_LocalPosition: {x: -33.69576, y: 5.09734, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8196,7 +8271,7 @@ GameObject:
   - component: {fileID: 1735237946}
   - component: {fileID: 1735237948}
   - component: {fileID: 1735237947}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9646,7 +9721,7 @@ GameObject:
   - component: {fileID: 1979193294}
   - component: {fileID: 1979193296}
   - component: {fileID: 1979193295}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10295,12 +10370,12 @@ GameObject:
   - component: {fileID: 2137396130}
   - component: {fileID: 2137396132}
   - component: {fileID: 2137396131}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2137396130
 Transform:
@@ -10433,7 +10508,7 @@ GameObject:
   - component: {fileID: 2140538224}
   - component: {fileID: 2140538226}
   - component: {fileID: 2140538225}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
