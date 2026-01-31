@@ -7,20 +7,24 @@ public class SniperMovement : MonoBehaviour
 {
     public InputManager input;
     public float mouseSensitivity;
-
+    private Rigidbody2D rb;
+    private SoundManager sound;
     private void Awake()
     {
-        // input = InputManager.Instance;
+        rb = GetComponent<Rigidbody2D>();
+        sound = FindFirstObjectByType<SoundManager>();
+
     }
 
-    void Start()
+    private void Start()
     {
-
+        Cursor.visible = false;
+        
     }
 
     void Update()
     {
-        transform.position += new Vector3(input.lookInput.x * Time.deltaTime * mouseSensitivity, 
-            input.lookInput.y * Time.deltaTime * mouseSensitivity, 0);
+        Application.targetFrameRate = 60;
+        rb.linearVelocity = new Vector2(input.lookInput.x * mouseSensitivity * Time.deltaTime, input.lookInput.y * mouseSensitivity * Time.deltaTime);
     }
 }
