@@ -12,15 +12,21 @@ public class CameraTransition : MonoBehaviour
     [SerializeField] private SpriteRenderer handgun;
     [SerializeField] private GameObject postProcessing;
     public Turn turn;
+    private SoundManager sound;
 
     private void Awake()
     {
         input = FindFirstObjectByType<InputManager>();
+        sound = FindFirstObjectByType<SoundManager>();
     }
 
     void Start()
     {
         currentTP = TPs[0]; // Set to aim sniper at building on start
+        sound.PlaySound(sound.woosh_ToBuilding);
+        sound.PlaySoundLoop(sound.ambience_Building, 1);
+        sound.PlaySoundLoop(sound.ambience_Party, 1);
+        sound.PlaySoundLoop(sound.wind_Building, 1);
     }
 
     void Update()
@@ -33,6 +39,15 @@ public class CameraTransition : MonoBehaviour
                 SetAim(TPs[0], true);
                 turn.TurnPlayer(currentTP_Index, 0);
                 currentTP_Index = 0;
+                sound.PlaySound(sound.woosh_ToBuilding);
+                sound.PlaySoundLoop(sound.ambience_Building, 1);
+                sound.PlaySoundLoop(sound.ambience_Party, 1);
+                sound.PlaySoundLoop(sound.wind_Building, 1);
+
+                sound.StopSound(sound.ambience_Street);
+                sound.StopSound(sound.wind_Street);
+
+                sound.StopSound(sound.ambience_Room);
             }
         }
         else if (input.moveDownAction.WasPressedThisFrame())
@@ -43,6 +58,16 @@ public class CameraTransition : MonoBehaviour
                 SetAim(TPs[1], true);
                 turn.TurnPlayer(currentTP_Index, 1);
                 currentTP_Index = 1;
+                sound.PlaySound(sound.woosh_ToStreet);
+                sound.PlaySoundLoop(sound.ambience_Street, 1);
+                sound.PlaySoundLoop(sound.wind_Street, 1);
+
+
+                sound.StopSound(sound.ambience_Building);
+                sound.StopSound(sound.ambience_Party);
+                sound.StopSound(sound.wind_Building);
+
+                sound.StopSound(sound.ambience_Room);
             }
         }
         else if (input.moveLeftAction.WasPressedThisFrame() || input.moveRightAction.WasCompletedThisFrame())
@@ -53,12 +78,30 @@ public class CameraTransition : MonoBehaviour
                 SetAim(TPs[2], false);
                 turn.TurnPlayer(currentTP_Index, 2);
                 currentTP_Index = 2;
+                sound.PlaySound(sound.woosh_ToRoom);
+                sound.PlaySoundLoop(sound.ambience_Room, 1);
+
+                sound.StopSound(sound.ambience_Street);
+                sound.StopSound(sound.wind_Street);
+
+                sound.StopSound(sound.ambience_Building);
+                sound.StopSound(sound.ambience_Party);
+                sound.StopSound(sound.wind_Building);
             }
             else
             {
                 SetAim(TPs[0], true);
                 turn.TurnPlayer(currentTP_Index, 0);
                 currentTP_Index = 0;
+                sound.PlaySound(sound.woosh_ToBuilding);
+                sound.PlaySoundLoop(sound.ambience_Building, 1);
+                sound.PlaySoundLoop(sound.ambience_Party, 1);
+                sound.PlaySoundLoop(sound.wind_Building, 1);
+
+                sound.StopSound(sound.ambience_Street);
+                sound.StopSound(sound.wind_Street);
+
+                sound.StopSound(sound.ambience_Room);
             }
         }
     }
