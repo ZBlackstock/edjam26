@@ -584,6 +584,71 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5, y: 5}
   m_EdgeRadius: 0
+--- !u!1 &78834095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 78834097}
+  - component: {fileID: 78834096}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &78834096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78834095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86bf7a1585e25f4aa534616d11f7ebe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  gameVolumeMixer: {fileID: 24300002, guid: e6ef7785da4d44f4093736d6df5b60aa, type: 2}
+  audioS: []
+  audioSUI: []
+  woosh_ToBuilding: {fileID: 8300000, guid: bad0eb0ec8c84f048b936838d914e7a5, type: 3}
+  woosh_ToStreet: {fileID: 8300000, guid: 5dc5b814ef395404e9b6d793805779f0, type: 3}
+  woosh_ToRoom: {fileID: 8300000, guid: 9ab01cb46e9ebeb4586e182f8dac3dd7, type: 3}
+  gunshot_Sniper: {fileID: 8300000, guid: 0f6bcb579cb75c742bbdfb92f8a2cf1b, type: 3}
+  gunshot_Handgun: {fileID: 8300000, guid: 1cfc5e9ae4d08db42a6a734fcaaa25e0, type: 3}
+  wind_Building: {fileID: 8300000, guid: 1b04652bd1eb291409402d287b94de8c, type: 3}
+  wind_Street: {fileID: 8300000, guid: b7af35230fa78244889fec89040c0d61, type: 3}
+  ambience_Building: {fileID: 8300000, guid: c9df11a9684184745bf5e733da14db85, type: 3}
+  ambience_Street: {fileID: 8300000, guid: 4669dd7bc65edfb45ac145870de77c64, type: 3}
+  ambience_Room: {fileID: 8300000, guid: c0f1e88012a10ea45a4b4904be438073, type: 3}
+  ambience_Party: {fileID: 8300000, guid: 56e362e7bc4019a40a191673ba827705, type: 3}
+  button_Highlight: {fileID: 8300000, guid: dfa7a00f0af21d241a81a7c0696e8bbf, type: 3}
+  button_Select: {fileID: 8300000, guid: 00a9cebe87ba035448e7b9d22b5ac985, type: 3}
+  death: {fileID: 8300000, guid: f07fe5d88c259e24f9ce4d345a903c1e, type: 3}
+  tension: {fileID: 8300000, guid: c327d1ea3867d33478ef59c709dbd2b5, type: 3}
+  enemy_alert: {fileID: 8300000, guid: 2eeba77be6ea723458e0459530705044, type: 3}
+  enemy_outside0: {fileID: 8300000, guid: 4699f9e72725d0949a312bb653a1cb5f, type: 3}
+  enemy_outside1: {fileID: 8300000, guid: e584b4a12763b1e44b92d80e7126f69e, type: 3}
+--- !u!4 &78834097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78834095}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &100150723
 GameObject:
   m_ObjectHideFlags: 0
@@ -10920,6 +10985,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 256538960}
   - {fileID: 1283746709}
+  - {fileID: 78834097}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 414357800}
