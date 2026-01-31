@@ -11,6 +11,9 @@ public class SoundManager : MonoBehaviour
     public List<AudioSource> audioSUI = new List<AudioSource>();
     private float soundRandomiser;
 
+    public AudioClip woosh_ToBuilding, woosh_ToStreet, woosh_ToRoom, gunshot_Sniper, gunshot_Handgun,
+        wind_Building, wind_Street, ambience_Building, ambience_Street, ambience_Room, ambience_Party,
+        button_Highlight, button_Select, death, tension, enemy_alert, enemy_outside0, enemy_outside1;
     private void Start()
     {
         StartCoroutine(AudioClear());
