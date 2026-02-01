@@ -81,7 +81,7 @@ public class SniperFire : MonoBehaviour
         float fireZ = -30;
         float curZ = z;
         sound.PlaySound(sound.gunshot_Handgun);
-
+        Instantiate(fire, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
         handGun.transform.GetChild(0).gameObject.SetActive(true);
         while (trans.position.z > fireZ)
         {

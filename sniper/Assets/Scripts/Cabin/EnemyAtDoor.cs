@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAtDoor : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class EnemyAtDoor : MonoBehaviour
     [SerializeField] GameObject door;
     float timer = 5;
     float currentTime = 0;
+
+    float timeTillKill = 0;
+    float killTime = 2;
     SoundManager sound;
 
     void Start()
@@ -19,15 +23,30 @@ public class EnemyAtDoor : MonoBehaviour
         {
             StartCoroutine(TimerThing());
         }
+        else
+        {
+            transform.GetComponent<BoxCollider2D>().enabled = true;
+            sound.PlaySound(sound.death);
+        }
     }
 
     void Update()
     {
-        if(currentTime >= timer && isDoorOpen != true)
+        if (currentTime >= timer && isDoorOpen != true)
         {
             door.transform.GetComponent<Animator>().SetBool("Door Open", true);
             sound.PlaySound(sound.door_creak);
             isDoorOpen = true;
+            transform.GetComponent<BoxCollider2D>().enabled = true;
+            sound.PlaySound(sound.death);
+        }
+        else if (timeTillKill < killTime && isDoorOpen)
+        {
+            timeTillKill += Time.deltaTime;
+        }
+        else if(timeTillKill >= killTime)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
