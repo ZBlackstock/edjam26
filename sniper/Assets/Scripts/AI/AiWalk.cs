@@ -19,7 +19,6 @@ public class AiWalk : ScriptableObject
         scaleX = ai.transform.localScale;
 
         getTarget = Random.Range(-82f, 0f);
-        Debug.Log(getTarget);
 
     }
     public LayerMask mask;
@@ -79,20 +78,23 @@ public class AiWalk : ScriptableObject
 
     private void EndState(AiController ai)
     {
-        Debug.Log("goal reached");
+
         int NextState = Random.Range(0, 101);
 
         if (NextState >= 0 && NextState <= 20)
         {
             ai.ChangeState(AiController.State.walking);
+            Debug.Log("change set by walk " + ai.name);
         }
         else if (NextState >= 21 && NextState <= 60)
         {
             ai.ChangeState(AiController.State.loitering);
+            Debug.Log("change set by walk " + ai.name);
         }
         else if (NextState >= 61 && NextState <= 100)
         {
             ai.ChangeState(AiController.State.sociliasing);
+            Debug.Log("change set by walk" + ai.name);
         }
     }
 }
