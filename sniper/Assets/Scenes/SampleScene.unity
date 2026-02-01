@@ -11558,7 +11558,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   spawn: 0
-  enemy: {fileID: 8451749628295306472, guid: c9c09689ab0e35d4d888947b819af2c9, type: 3}
+  number: 0
+  enemies:
+  - {fileID: 8451749628295306472, guid: c9c09689ab0e35d4d888947b819af2c9, type: 3}
+  - {fileID: 8451749628295306472, guid: 94093f9dc103f5f459e3fc6e6ab280fc, type: 3}
+  - {fileID: 8451749628295306472, guid: 325a242b9d66e72489d61e1ae85e1c9d, type: 3}
+  - {fileID: 8451749628295306472, guid: b978fe00f90df8e4187084f1ae5c5246, type: 3}
+  - {fileID: 8451749628295306472, guid: 5ec0fb1f3e114d443bb3274bb29a854b, type: 3}
+  - {fileID: 8451749628295306472, guid: b18909bdc5ef09146a87bae0338be735, type: 3}
+  - {fileID: 8451749628295306472, guid: 34c5d94ac1a929640aed97bc45a63c01, type: 3}
+  - {fileID: 8451749628295306472, guid: b36e7ffb1abfbd5438336f66cc7dc2d8, type: 3}
+  - {fileID: 8451749628295306472, guid: 27c113c47c6fc41498625d4a4b651d47, type: 3}
+  - {fileID: 8451749628295306472, guid: f80fe94f2e2850741a83a6ee2bb5cb38, type: 3}
 --- !u!4 &1459408159
 Transform:
   m_ObjectHideFlags: 0
