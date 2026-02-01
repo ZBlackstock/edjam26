@@ -11537,6 +11537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1459408159}
   - component: {fileID: 1459408158}
+  - component: {fileID: 1459408160}
   m_Layer: 0
   m_Name: Enemy_TopDownSpawner
   m_TagString: Untagged
@@ -11573,6 +11574,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459408160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459408157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfb62e91df52f94e97be1389bb16ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BulletDetect
+  DeathFX: {fileID: 8156315684070485109, guid: 70147af899de5e14ba51fc63f40ba05d, type: 3}
 --- !u!1 &1459910771
 GameObject:
   m_ObjectHideFlags: 0
