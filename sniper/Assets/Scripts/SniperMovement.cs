@@ -9,6 +9,8 @@ public class SniperMovement : MonoBehaviour
     public float mouseSensitivity;
     private Rigidbody2D rb;
     private SoundManager sound;
+    public GameObject youFailed;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
