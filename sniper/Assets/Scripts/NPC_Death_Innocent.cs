@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class NPC_Death_Innocent : MonoBehaviour
@@ -11,8 +12,11 @@ public class NPC_Death_Innocent : MonoBehaviour
         Invoke(nameof(ParticleMove), 0.2f);
         Invoke(nameof(ResetGame), 3f);
 
-        FindFirstObjectByType<SniperFire>().enabled = false;
-        FindFirstObjectByType<SniperMovement>().enabled = false;
+        GameObject cam = FindFirstObjectByType<SniperMovement>().gameObject;
+        cam.GetComponent<SniperMovement>().youFailed.SetActive(true);
+        cam.GetComponent<SniperFire>().enabled = false;
+        cam.GetComponent<SniperMovement>().enabled = false;
+
     }
     private void ParticleMove()
     {

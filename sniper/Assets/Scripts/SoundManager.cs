@@ -13,7 +13,8 @@ public class SoundManager : MonoBehaviour
 
     public AudioClip woosh_ToBuilding, woosh_ToStreet, woosh_ToRoom, gunshot_Sniper, gunshot_Handgun,
         wind_Building, wind_Street, ambience_Building, ambience_Street, ambience_Room, ambience_Party,
-        button_Highlight, button_Select, death, tension, enemy_alert, enemy_outside0, enemy_outside1, door_bash, door_creak;
+        button_Highlight, button_Select, death, tension, enemy_alert, enemy_outside0, enemy_outside1, 
+        door_bash, door_creak, enemy_enterBuilding;
 
     public static SoundManager Instance { get; private set; }
 
