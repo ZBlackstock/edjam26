@@ -15,8 +15,8 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/edjam2026/edjam26/sniper/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/edjam2026/edjam26/sniper/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/edjam2026/edjam26/sniper/Assets/Scripts/SoundManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/edjam2026/edjam26/sniper/Assets/Scripts/SoundManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -30,7 +30,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "zach__cam-bounds"
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -74,12 +82,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b869ed09-443c-422d-b7dc-ae5f843b2bd2" name="Changes" comment="" />
+      <changelist id="a7172c03-0d02-4711-ae50-3a9ab88bbca2" name="Changes" comment="" />
       <created>1769876765093</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769876765093</updated>
       <workItem from="1769876768888" duration="715000" />
+      <workItem from="1769959243848" duration="698000" />
     </task>
     <servers />
   </component>
@@ -88,6 +97,7 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
     <option name="unityProjectFolder" value="true" />
   </component>
