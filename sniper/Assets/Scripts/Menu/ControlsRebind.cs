@@ -9,7 +9,7 @@ public class ControlsRebind : MonoBehaviour
     void Start()
     {
         man = InputManager.Instance;
-        man.moveLeftAction.ChangeBinding(1).WithName("a");
+        //man.moveLeftAction.ChangeBinding(1).WithName("a");
         //controls.FindBinding(InputAction);
     }
 }
