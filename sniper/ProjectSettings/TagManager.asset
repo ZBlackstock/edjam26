@@ -3,42 +3,41 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Bullet
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - ""
+  - 
   - Water
   - UI
   - Wall
-  - ""
+  - 
   - Camera
   - CameraBounds
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
-  - ""
+  - NPC_Innocent
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
