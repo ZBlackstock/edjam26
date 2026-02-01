@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   targetPos: {x: 61.29, y: -13.28, z: 0}
   FX_DoorReached: {fileID: 8156315684070485109, guid: b6c0cbebd1ef4694b88a01a16145fc38, type: 3}
+  enemyAtDoor: {fileID: 6591543230382510605, guid: 9323252fca9bd25448dd69c4e57dec9b, type: 3}
   moveSpeed: 200
 --- !u!114 &7851443741506229731
 MonoBehaviour:

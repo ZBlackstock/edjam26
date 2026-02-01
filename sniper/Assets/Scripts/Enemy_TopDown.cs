@@ -5,6 +5,7 @@ public class Enemy_TopDown : MonoBehaviour
 {
     public Vector3 targetPos;
     public GameObject FX_DoorReached;
+    [SerializeField] GameObject enemyAtDoor;
 
     public float moveSpeed = 200;
     float duration = 0;
@@ -50,5 +51,6 @@ public class Enemy_TopDown : MonoBehaviour
         }
         Instantiate(FX_DoorReached, transform.position, Quaternion.identity);
         Destroy(gameObject);
+        Instantiate(enemyAtDoor, enemyAtDoor.transform.position, enemyAtDoor.transform.rotation);
     }
 }

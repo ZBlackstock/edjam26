@@ -18,6 +18,7 @@ public class EnemyAtDoor : MonoBehaviour
     void Start()
     {
         sound = FindFirstObjectByType<SoundManager>();
+        door = GameObject.Find("ShedDoor_0");
         isDoorOpen = door.transform.GetComponent<Animator>().GetBool("Door Open");
         if (!isDoorOpen)
         {
@@ -52,7 +53,7 @@ public class EnemyAtDoor : MonoBehaviour
 
     IEnumerator TimerThing()
     {
-        while (currentTime < timer)
+        while (currentTime < timer && !isDoorOpen)
         {
             if (!sound.IsSoundPlaying(sound.door_bash))
             {
