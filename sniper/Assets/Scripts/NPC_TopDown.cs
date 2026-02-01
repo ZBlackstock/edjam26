@@ -40,7 +40,7 @@ public class NPC_TopDown : MonoBehaviour
             timer = 0;
             duration = Random.Range(5f, 6);
 
-            while (transform.position != targetPos)
+            while (!Mathf.Approximately(transform.position.x, targetPos.x) && !Mathf.Approximately(transform.position.y, targetPos.y))
             {
                 transform.position = new Vector3(Mathf.Lerp(startPos.x, targetPos.x, timer / duration),
                     Mathf.Lerp(startPos.y, targetPos.y, timer / duration), 0);
@@ -49,8 +49,13 @@ public class NPC_TopDown : MonoBehaviour
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
                 transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-                timer += Time.fixedDeltaTime;
-                yield return new WaitForFixedUpdate();
+                timer += Time.deltaTime;
+
+                if(timer > duration)
+                {
+                    break;
+                }
+                yield return null;
             }
         }
     }
