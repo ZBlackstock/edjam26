@@ -25,7 +25,7 @@ public class NPC_TopDown : MonoBehaviour
         while (true)
         {
             timer = 0;
-            while(timer < Random.Range(2f, 5f))
+            while (timer < Random.Range(2f, 5f))
             {
                 timer += Time.deltaTime;
                 yield return null;
@@ -38,19 +38,19 @@ public class NPC_TopDown : MonoBehaviour
             startPos = transform.position;
 
             timer = 0;
-            duration = Random.Range(1f, 5);
+            duration = Random.Range(5f, 6);
 
             while (transform.position != targetPos)
             {
                 transform.position = new Vector3(Mathf.Lerp(startPos.x, targetPos.x, timer / duration),
-                    Mathf.Lerp(startPos.y, targetPos.y, timer / duration),0);
+                    Mathf.Lerp(startPos.y, targetPos.y, timer / duration), 0);
 
                 Vector2 direction = targetPos - transform.position;
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
                 transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-                timer += Time.deltaTime;
-                yield return null;
+                timer += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
             }
         }
     }

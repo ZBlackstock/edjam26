@@ -9,6 +9,7 @@ public class SniperFire : MonoBehaviour
     public SpriteRenderer handGun;
     bool canFire = true;
     private SoundManager sound;
+    public GameObject fire;
 
     void Start()
     {
@@ -42,7 +43,10 @@ public class SniperFire : MonoBehaviour
         float z = -25;
         float fireZ = -40;
         float curZ = z;
+
+        Instantiate(fire, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
         sound.PlaySound(sound.gunshot_Sniper);
+
         while (trans.position.z > fireZ)
         {
             curZ = Mathf.Lerp(z, fireZ, elapsed / dur);

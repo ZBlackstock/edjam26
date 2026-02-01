@@ -4381,9 +4381,9 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420037}
   - component: {fileID: 519420035}
   - component: {fileID: 519420036}
-  - component: {fileID: 519420037}
   - component: {fileID: 519420038}
   m_Layer: 6
   m_Name: Camera
@@ -4634,6 +4634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sniper: {fileID: 1069199426}
   handGun: {fileID: 1230431727}
+  fire: {fileID: 8605384200125906148, guid: 614cc4a58b0117445ad836aeb34b9816, type: 3}
 --- !u!212 &519420038
 SpriteRenderer:
   serializedVersion: 2
@@ -9791,6 +9792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1376925490}
   - component: {fileID: 1376925494}
+  - component: {fileID: 1376925495}
   - component: {fileID: 1376925492}
   - component: {fileID: 1376925493}
   - component: {fileID: 1376925491}
@@ -9952,6 +9954,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   moveSpeed: 500
+--- !u!114 &1376925495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376925489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfb62e91df52f94e97be1389bb16ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  DeathFX: {fileID: 8156315684070485109, guid: 11a4524bf7871f044bbb31e561abb5eb, type: 3}
 --- !u!1 &1380741230
 GameObject:
   m_ObjectHideFlags: 0
