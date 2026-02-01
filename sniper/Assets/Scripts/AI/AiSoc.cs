@@ -41,9 +41,12 @@ public class AiSoc : ScriptableObject
 
                 continue;
             }
+
             if (other == ai) continue;
             // Conditions
+
             if (other.FloorID != FloorID) continue;
+
             if (other.state != ai.state) continue;
             if (other.aiSoc.isPaired != false) continue;
             if (other == ai) continue;
