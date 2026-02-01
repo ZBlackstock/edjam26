@@ -36,17 +36,6 @@ public class NPC_TopDown : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(x, y, 0), moveSpeed * Time.deltaTime);
 
-                Vector2 direction = new Vector2(x, y) - (Vector2)transform.position;
-                float targetAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-                float angle = Mathf.LerpAngle(
-                   transform.eulerAngles.z,
-                   targetAngle,
-                   10f * Time.deltaTime
-               );
-
-
-                transform.rotation = Quaternion.Euler(0f, 0f, angle);
                 timer += Time.deltaTime;
                 yield return null;
             }
