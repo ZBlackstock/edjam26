@@ -51,6 +51,9 @@ TagManager:
   - name: 2
     uniqueID: 1188619163
     locked: 0
+  - name: NPC
+    uniqueID: 2623234647
+    locked: 0
   - name: 1
     uniqueID: 4137069741
     locked: 0

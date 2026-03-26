@@ -50,7 +50,7 @@ public class Enemy_TopDown : MonoBehaviour
             yield return null;
         }
         Instantiate(FX_DoorReached, transform.position, Quaternion.identity);
-        Destroy(gameObject);
         Instantiate(enemyAtDoor, enemyAtDoor.transform.position, enemyAtDoor.transform.rotation);
+        Destroy(gameObject);
     }
 }

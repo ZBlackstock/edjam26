@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Dynamic;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class AiController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
+    public Sprite[] masks = new Sprite[10];
+    public SpriteRenderer sr;
+    int spriteIndex;
     [SerializeField] public int FloorID;
     [SerializeField] public float WalkSpeed = 2f;
+    float waitTimer = 0;
     public enum State
     {
         walking,
@@ -22,6 +19,12 @@ public class AiController : MonoBehaviour
         paired
     }
 
+    private void Start()
+    {
+        spriteIndex = Random.Range(0, 10);
+        sr.sprite = masks[spriteIndex];
+        waitTimer = Random.Range(5, 15);
+    }
 
     public State state;
 
@@ -42,15 +45,22 @@ public class AiController : MonoBehaviour
         aiMeet = new AiMeet();
         aiSoc.Enter(this);
 
-        isEnemy = Random.Range(1, 5) == 1;
-    }
-    // Update is called once per frame
-    void Update()
-    {
+        isEnemy = Random.Range(1, 3) == 1;
+
         if (isEnemy)
         {
+            GetComponent<BulletDetect>().IsEnemy();
 
-            if (2 < Vector2.Distance(transform.position, Camera.main.transform.position))
+        }
+    }
+    // Update is called once per frame
+
+    void Update()
+    {
+        waitTimer -= Time.deltaTime;
+        if (isEnemy)
+        {
+            if (Vector2.Distance(sr.transform.position, Camera.main.transform.position) < 2 || waitTimer < 0)
             {
                 if (!attackSequenceStarted)
                 {
@@ -75,16 +85,21 @@ public class AiController : MonoBehaviour
         float time = Random.Range(0.5f, 3f);
         float timer = 0;
 
-        while (timer < time)
+        if (waitTimer > 0)
         {
-            timer += Time.deltaTime;
-            if (3 > Vector2.Distance(transform.position, Camera.main.transform.position))
+            while (timer < time)
             {
-                StopCoroutine(WaitThenMaybeAttack());
+                timer += Time.deltaTime;
+                if (3 > Vector2.Distance(transform.position, Camera.main.transform.position))
+                {
+                    StopCoroutine(WaitThenMaybeAttack());
+                }
+                yield return null;
             }
-            yield return null;
         }
 
+        FindFirstObjectByType<TopDown_EnemySpawner>().SpawnEnemy(spriteIndex);
+        Destroy(gameObject);
     }
 
     public void ChangeState(State NewState)

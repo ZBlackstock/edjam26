@@ -12,7 +12,7 @@ public class AiMeet : ScriptableObject
     private Animator anim;
 
     float OtherAI;
-    public void Enter(AiController ai,AiController _target)
+    public void Enter(AiController ai, AiController _target)
     {
         walkSpeed = ai.WalkSpeed;
         target = _target;
@@ -26,7 +26,7 @@ public class AiMeet : ScriptableObject
     {
         getDirection(ai);
 
-        if (distance(ai) > 3) 
+        if (distance(ai) > 3)
         {
             Move(ai);
         }
@@ -34,15 +34,15 @@ public class AiMeet : ScriptableObject
         {
             ai.ChangeState(AiController.State.loitering);
         }
-        
-       
+
+
     }
 
     private void Move(AiController ai)
     {
         anim.SetInteger("action", 0);
         ai.transform.position += new Vector3(walkSpeed * MoveDir * Time.deltaTime, 0, 0);
-        Debug.Log("travelling as "+ ai.name + " " + new Vector3(walkSpeed * MoveDir * Time.deltaTime, 0, 0));
+        Debug.Log("travelling as " + ai.name + " " + new Vector3(walkSpeed * MoveDir * Time.deltaTime, 0, 0));
     }
 
     private void getDirection(AiController ai)
@@ -63,13 +63,17 @@ public class AiMeet : ScriptableObject
             scaleX.x = -0.3f;
             ai.transform.localScale = scaleX;
         }
-        Debug.Log("AI "+ai.name+ " going direction of travel to other ai = " + MoveDir + " target X = " + OtherAI + " startloc X = " + thisAI);
+        Debug.Log("AI " + ai.name + " going direction of travel to other ai = " + MoveDir + " target X = " + OtherAI + " startloc X = " + thisAI);
     }
 
     private float distance(AiController ai)
     {
-        Debug.Log("distance to between targets = " + Mathf.Abs(ai.transform.position.x - target.transform.position.x));
-        return Mathf.Abs(ai.transform.position.x - target.transform.position.x);
+        if (ai.gameObject.activeInHierarchy) 
+        {
+            Debug.Log("distance to between targets = " + Mathf.Abs(ai.transform.position.x - target.transform.position.x));
+            return Mathf.Abs(ai.transform.position.x - target.transform.position.x);
+        }
 
+        return -1;
     }
 }

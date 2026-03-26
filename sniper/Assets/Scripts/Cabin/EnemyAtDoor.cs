@@ -17,6 +17,7 @@ public class EnemyAtDoor : MonoBehaviour
 
     void Start()
     {
+     
         sound = FindFirstObjectByType<SoundManager>();
         door = GameObject.Find("ShedDoor_0");
         isDoorOpen = door.transform.GetComponent<Animator>().GetBool("Door Open");
@@ -30,7 +31,6 @@ public class EnemyAtDoor : MonoBehaviour
             sound.PlaySound(sound.death);
         }
     }
-
     void Update()
     {
         if (currentTime >= timer && isDoorOpen != true)

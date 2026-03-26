@@ -227,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   targetPos: {x: 61.29, y: -13.28, z: 0}
   FX_DoorReached: {fileID: 8156315684070485109, guid: b6c0cbebd1ef4694b88a01a16145fc38, type: 3}
+  enemyAtDoor: {fileID: 6591543230382510605, guid: 97d8fba6727f0ea41bf4abb04e4de08c, type: 3}
   moveSpeed: 200
 --- !u!114 &7851443741506229731
 MonoBehaviour:
@@ -240,7 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbfb62e91df52f94e97be1389bb16ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  DeathFX: {fileID: 8156315684070485109, guid: 70147af899de5e14ba51fc63f40ba05d, type: 3}
+  DeathFX_Innocent: {fileID: 8156315684070485109, guid: 11a4524bf7871f044bbb31e561abb5eb, type: 3}
+  DeathFX_Enemy: {fileID: 8156315684070485109, guid: fe7c0f79c479e9e4f99b3ac0ccd78a59, type: 3}
+  isEnemy: 1
 --- !u!58 &8808470171495368002
 CircleCollider2D:
   m_ObjectHideFlags: 0
